@@ -117,7 +117,7 @@ def get_daily_logs(request):
                     logs.append((i['_source']))
                 except:
                     no_timestamp+=1
-            if(not no_timestamp):
+            if(no_timestamp>0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
                 headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
@@ -187,7 +187,7 @@ def get_warning_logs(request):
                     logs.append((i['_source']))
                 except:
                     no_timestamp+=1
-            if(not no_timestamp):
+            if(no_timestamp>0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
                 headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
@@ -257,7 +257,7 @@ def get_error_logs(request):
                     logs.append((i['_source']))
                 except:
                     no_timestamp+=1
-            if(not no_timestamp):
+            if(no_timestamp > 0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
                 headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
