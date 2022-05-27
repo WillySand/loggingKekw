@@ -1,0 +1,5 @@
+Django==3.2.8
+dj-database-url==0.4.2
+django-environ==0.4.4
+gunicorn==19.7.1
+requests==2.27.1
