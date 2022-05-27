@@ -20,4 +20,6 @@ urlpatterns = [
     path('', get_all_logs, name="get_all_logs"),
     path('daily', get_daily_logs, name="get_daily_logs"),
     path('warning', get_warning_logs, name="get_warning_logs"),
+    path('error', get_error_logs, name="get_error_logs"),
+    path('default', get_default_logs, name="get_default_logs"),
 ]
