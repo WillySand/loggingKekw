@@ -38,7 +38,6 @@ def get_all_logs(request):
                 try:
                     i['_source']['timestamp'] = corrected_datetime(i['_source'].pop('@timestamp'))
                     logs.append((i['_source']))
-                    raise Exception
                 except:
                     no_timestamp+=1
                     
