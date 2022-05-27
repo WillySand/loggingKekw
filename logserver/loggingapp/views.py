@@ -125,9 +125,9 @@ def get_daily_logs(request):
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_daily_logs"}'
                 resp = requests.post(url, headers=headers, data=data)
-                return render(request,'logging.html',{
-                    'logs': logs,
-                })
+            return render(request,'logging.html',{
+                'logs': logs,
+            })
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
@@ -195,9 +195,9 @@ def get_warning_logs(request):
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_warning_logs"}'
                 resp = requests.post(url, headers=headers, data=data)
-                return render(request,'logging.html',{
-                    'logs': logs,
-                })
+            return render(request,'logging.html',{
+                'logs': logs,
+            })
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
@@ -265,9 +265,9 @@ def get_error_logs(request):
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_error_logs"}'
                 resp = requests.post(url, headers=headers, data=data)
-                return render(request,'logging.html',{
-                    'logs': logs,
-                })
+            return render(request,'logging.html',{
+                'logs': logs,
+            })
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
@@ -335,9 +335,9 @@ def get_default_logs(request):
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_error_logs"}'
                 resp = requests.post(url, headers=headers, data=data)
-                return render(request,'logging.html',{
-                    'logs': logs,
-                })
+            return render(request,'logging.html',{
+                'logs': logs,
+            })
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
