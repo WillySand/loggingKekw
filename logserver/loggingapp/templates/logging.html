@@ -14,15 +14,17 @@
 {% block content %}
 <body>
     <div class="container container-judul">
-        <h2>LOG TITLE</h2>
+        <h2>Logs</h2>
     </div>
-	<table style="border: 1px solid">
-		<tr style="border: 1px solid">
-			<td style="border: 1px solid">Timestamp
-			<td style="border: 1px solid">Message
-			<td style="border: 1px solid">Type
+		<table>
 		{% for log in logs %}
-		<tr style="border: 1px solid">
+		{% if log.type == "warning" %}
+		<tr style="background-color:#ffffc0">
+		{% elif log.type == "error" %}
+		<tr style="background-color:#ffc0c0">
+		{% else %}
+		<tr style="background-color:#c0c0ff">
+		{% endif %}
 			<td style="border: 1px solid"> {{ log.timestamp }} 			
 			{% if log.body %}
 			<td style="border: 1px solid"> {{ log.body }}
@@ -30,6 +32,8 @@
 			<td style="border: 1px solid">{{ log.message }}
 			{% endif %}
 			<td style="border: 1px solid"> {{ log.type }}
+			<td style="border: 1px solid"> {{log.source}} || {{ log.function }}
+		</div>
 		{% endfor %}
 </body>
 </html>
