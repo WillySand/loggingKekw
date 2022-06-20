@@ -7,7 +7,7 @@ from .constants import *
 from .util import *
 
 def get_all_logs(request):
-    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=49113f7d-674d-4ce8-b4e3-4df613a4869c"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -74,7 +74,7 @@ def get_all_logs(request):
         return redirect("get_all_logs")
     
 def get_daily_logs(request):
-    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=49113f7d-674d-4ce8-b4e3-4df613a4869c"
     today,yesterday = daily_log_dates()
     payload = """
         {
@@ -149,7 +149,7 @@ def get_daily_logs(request):
         return redirect("get_daily_logs")
 
 def get_warning_logs(request):
-    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=49113f7d-674d-4ce8-b4e3-4df613a4869c"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -219,7 +219,7 @@ def get_warning_logs(request):
         return redirect("get_all_logs")
 
 def get_error_logs(request):
-    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=49113f7d-674d-4ce8-b4e3-4df613a4869c"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -289,7 +289,7 @@ def get_error_logs(request):
         return redirect("get_all_logs")
     
 def get_default_logs(request):
-    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=49113f7d-674d-4ce8-b4e3-4df613a4869c"
     payload = """
         {
             "size":"""+LOGSIZE+""",
