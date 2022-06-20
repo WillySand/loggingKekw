@@ -7,7 +7,7 @@ from .constants import *
 from .util import *
 
 def get_all_logs(request):
-    url = "https://b5e73130-42e3-4c1a-9149-bc23fd8b4ed1-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -44,7 +44,7 @@ def get_all_logs(request):
             if(no_timestamp>0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
-                headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+                headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
                 headers["Content-Type"] = "application/json"
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_all_logs"}'
@@ -56,7 +56,7 @@ def get_all_logs(request):
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
-            headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+            headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
             headers["Content-Type"] = "application/json"
             headers["LogType"] = "warning"
             data = '{"message": request to log server timed out,"source":"Logging Service","function":"get_all_logs"}'
@@ -66,7 +66,7 @@ def get_all_logs(request):
     except Exception as e:
         url = "https://api.logit.io/v2"
         headers = CaseInsensitiveDict()
-        headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+        headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
         headers["Content-Type"] = "application/json"
         headers["LogType"] = "error"
         data = '{"message":"'+str(e)+'","source":"Logging Service","function":"get_all_logs"}'
@@ -74,7 +74,7 @@ def get_all_logs(request):
         return redirect("get_all_logs")
     
 def get_daily_logs(request):
-    url = "https://b5e73130-42e3-4c1a-9149-bc23fd8b4ed1-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
     today,yesterday = daily_log_dates()
     payload = """
         {
@@ -120,7 +120,7 @@ def get_daily_logs(request):
             if(no_timestamp>0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
-                headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+                headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
                 headers["Content-Type"] = "application/json"
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_daily_logs"}'
@@ -131,7 +131,7 @@ def get_daily_logs(request):
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
-            headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+            headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
             headers["Content-Type"] = "application/json"
             headers["LogType"] = "warning"
             data = '{"message": request to log server timed out,"source":"Logging Service","function":"get_daily_logs"}'
@@ -141,7 +141,7 @@ def get_daily_logs(request):
     except Exception as e:
         url = "https://api.logit.io/v2"
         headers = CaseInsensitiveDict()
-        headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+        headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
         headers["Content-Type"] = "application/json"
         headers["LogType"] = "error"
         data = '{"message":"'+str(e)+'","source":"Logging Service","function":"get_daily_logs"}'
@@ -149,7 +149,7 @@ def get_daily_logs(request):
         return redirect("get_daily_logs")
 
 def get_warning_logs(request):
-    url = "https://b5e73130-42e3-4c1a-9149-bc23fd8b4ed1-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -190,7 +190,7 @@ def get_warning_logs(request):
             if(no_timestamp>0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
-                headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+                headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
                 headers["Content-Type"] = "application/json"
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_warning_logs"}'
@@ -201,7 +201,7 @@ def get_warning_logs(request):
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
-            headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+            headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
             headers["Content-Type"] = "application/json"
             headers["LogType"] = "warning"
             data = '{"message": request to log server timed out,"source":"Logging Service","function":"get_warning_logs"}'
@@ -211,7 +211,7 @@ def get_warning_logs(request):
     except Exception as e:
         url = "https://api.logit.io/v2"
         headers = CaseInsensitiveDict()
-        headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+        headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
         headers["Content-Type"] = "application/json"
         headers["LogType"] = "error"
         data = '{"message":"'+str(e)+'","source":"Logging Service","function":"get_warning_logs"}'
@@ -219,7 +219,7 @@ def get_warning_logs(request):
         return redirect("get_all_logs")
 
 def get_error_logs(request):
-    url = "https://b5e73130-42e3-4c1a-9149-bc23fd8b4ed1-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -260,7 +260,7 @@ def get_error_logs(request):
             if(no_timestamp > 0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
-                headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+                headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
                 headers["Content-Type"] = "application/json"
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_error_logs"}'
@@ -271,7 +271,7 @@ def get_error_logs(request):
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
-            headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+            headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
             headers["Content-Type"] = "application/json"
             headers["LogType"] = "warning"
             data = '{"message": request to log server timed out,"source":"Logging Service","function":"get_error_logs"}'
@@ -281,7 +281,7 @@ def get_error_logs(request):
     except Exception as e:
         url = "https://api.logit.io/v2"
         headers = CaseInsensitiveDict()
-        headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+        headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
         headers["Content-Type"] = "application/json"
         headers["LogType"] = "error"
         data = '{"message":"'+str(e)+'","source":"Logging Service","function":"get_error_logs"}'
@@ -289,7 +289,7 @@ def get_error_logs(request):
         return redirect("get_all_logs")
     
 def get_default_logs(request):
-    url = "https://b5e73130-42e3-4c1a-9149-bc23fd8b4ed1-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
+    url = "https://39827838-5ea5-42af-935c-fed0a5e34deb-es.logit.io/log*/_search/?apikey=d4515982-e9d8-4416-9c3f-81acb7614a16"
     payload = """
         {
             "size":"""+LOGSIZE+""",
@@ -330,7 +330,7 @@ def get_default_logs(request):
             if(no_timestamp > 0):
                 url = "https://api.logit.io/v2"
                 headers = CaseInsensitiveDict()
-                headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+                headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
                 headers["Content-Type"] = "application/json"
                 headers["LogType"] = "warning"
                 data = '{"message": "There are '+str(no_timestamp)+' without timestamps","source":"Logging Service","function":"get_error_logs"}'
@@ -341,7 +341,7 @@ def get_default_logs(request):
         else:
             url = "https://api.logit.io/v2"
             headers = CaseInsensitiveDict()
-            headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+            headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
             headers["Content-Type"] = "application/json"
             headers["LogType"] = "warning"
             data = '{"message": request to log server timed out,"source":"Logging Service","function":"get_error_logs"}'
@@ -351,7 +351,7 @@ def get_default_logs(request):
     except Exception as e:
         url = "https://api.logit.io/v2"
         headers = CaseInsensitiveDict()
-        headers["ApiKey"] = "cc6ea62c-7b13-4cea-9a5d-86410e70dbc1"
+        headers["ApiKey"] = "55332b15-6d93-47d4-9846-cf4c1aa74b69"
         headers["Content-Type"] = "application/json"
         headers["LogType"] = "error"
         data = '{"message":"'+str(e)+'","source":"Logging Service","function":"get_error_logs"}'
